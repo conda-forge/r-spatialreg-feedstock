@@ -1,4 +1,4 @@
-{% set version = '1.2-1' %}
+{% set version = "1.2-3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatialreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatialreg/spatialreg_{{ version }}.tar.gz
-  sha256: 4c40b6b331aa8818254633cfb80d4b9a03b2b6fac2c0104b3b99201d447ba081
+  sha256: 09e0e65f043975d5c1d4be99ef9f29cf0790e962dcde9b7e45a7027d268fce22
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -67,27 +67,14 @@ test:
 about:
   home: https://github.com/r-spatial/spatialreg/, https://r-spatial.github.io/spatialreg/
   license: GPL-2.0-only
-  summary: A collection of all the estimation functions for spatial cross-sectional models (on
-    lattice/areal data using spatial weights matrices) contained up to now in 'spdep',
-    'sphet' and 'spse'. These model fitting functions include maximum likelihood methods
-    for cross-sectional models proposed by 'Cliff' and 'Ord' (1973, ISBN:0850860369)
-    and (1981, ISBN:0850860814), fitting methods initially described by 'Ord' (1975)
-    <doi:10.1080/01621459.1975.10480272>. The models are further described by 'Anselin'
-    (1988) <doi:10.1007/978-94-015-7799-1>. Spatial two stage least squares and spatial
-    general method of moment models initially proposed by 'Kelejian' and 'Prucha' (1998)
-    <doi:10.1023/A:1007707430416> and (1999) <doi:10.1111/1468-2354.00027> are provided.
-    Impact methods and MCMC fitting methods proposed by 'LeSage' and 'Pace' (2009) <doi:10.1201/9781420064254>
-    are implemented for the family of cross-sectional spatial regression models. Methods
-    for fitting the log determinant term in maximum likelihood and MCMC fitting are
-    compared by 'Bivand et al.' (2013) <doi:10.1111/gean.12008>, and model fitting methods
-    by 'Bivand' and 'Piras' (2015) <doi:10.18637/jss.v063.i18>; both of these articles
-    include extensive lists of references. 'spatialreg' >= 1.1-* correspond to 'spdep'
-    >= 1.1-1, in which the model fitting functions are deprecated and pass through to
-    'spatialreg', but will mask those in 'spatialreg'. From versions 1.2-*, the functions
-    will be made defunct in 'spdep'.
+  summary: A collection of all the estimation functions for spatial cross-sectional models (on lattice/areal data using spatial weights matrices) contained up to now in 'spdep', 'sphet' and 'spse'. These model fitting functions include maximum likelihood methods for cross-sectional models proposed by 'Cliff' and 'Ord' (1973,
+    ISBN:0850860369) and (1981, ISBN:0850860814), fitting methods initially described by 'Ord' (1975) <doi:10.1080/01621459.1975.10480272>. The models are further described by 'Anselin' (1988) <doi:10.1007/978-94-015-7799-1>. Spatial two stage least squares and spatial general method of moment models initially proposed by
+    'Kelejian' and 'Prucha' (1998) <doi:10.1023/A:1007707430416> and (1999) <doi:10.1111/1468-2354.00027> are provided. Impact methods and MCMC fitting methods proposed by 'LeSage' and 'Pace' (2009) <doi:10.1201/9781420064254> are implemented for the family of cross-sectional spatial regression models. Methods for fitting
+    the log determinant term in maximum likelihood and MCMC fitting are compared by 'Bivand et al.' (2013) <doi:10.1111/gean.12008>, and model fitting methods by 'Bivand' and 'Piras' (2015) <doi:10.18637/jss.v063.i18>; both of these articles include extensive lists of references. 'spatialreg' >= 1.1-* correspond to 'spdep'
+    >= 1.1-1, in which the model fitting functions are deprecated and pass through to 'spatialreg', but will mask those in 'spatialreg'. From versions 1.2-*, the functions will be made defunct in 'spdep'.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
