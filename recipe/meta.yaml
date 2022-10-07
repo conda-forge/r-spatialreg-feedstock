@@ -1,4 +1,4 @@
-{% set version = "1.2-5" %}
+{% set version = "1.2-6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatialreg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatialreg/spatialreg_{{ version }}.tar.gz
-  sha256: e59c68c5af0c945a5c4322dc1b69e9fc588b77267b2e55e6b11609519c790d27
+  sha256: 9b384117a31ab5fe830325b3eacbec5eb9d40bf0e9ca3c75ea15ca6b78fbd41d
 
 build:
   merge_build_host: true  # [win]
