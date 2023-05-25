@@ -37,9 +37,9 @@ requirements:
     - r-boot
     - r-coda
     - r-expm
-    - r-gmodels
+    - r-multcomp
     - r-nlme
-    - r-sf >=1.0_4
+    - r-sf
     - r-spdata
     - r-spdep
     - libblas
@@ -53,9 +53,9 @@ requirements:
     - r-boot
     - r-coda
     - r-expm
-    - r-gmodels
+    - r-multcomp
     - r-nlme
-    - r-sf >=1.0_4
+    - r-sf
     - r-spdata
     - r-spdep
 
