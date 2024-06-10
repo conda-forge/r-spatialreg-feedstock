@@ -32,7 +32,6 @@ requirements:
     - {{ posix }}coreutils       # [win]
     - {{ posix }}zip             # [win]
   host:
-  host:
     - r-base
     - r-learnbayes
     - r-mass
