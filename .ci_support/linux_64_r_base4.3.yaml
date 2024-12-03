@@ -7,7 +7,7 @@ c_stdlib:
 c_stdlib_version:
 - '2.17'
 cdt_name:
-- cos7
+- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,7 +15,7 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- quay.io/condaforge/linux-anvil-x86_64:alma9
 libblas:
 - 3.9 *netlib
 liblapack:
@@ -28,6 +28,3 @@ r_base:
 - '4.3'
 target_platform:
 - linux-64
-zip_keys:
-- - c_stdlib_version
-  - cdt_name
