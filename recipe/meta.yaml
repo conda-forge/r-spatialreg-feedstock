@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
