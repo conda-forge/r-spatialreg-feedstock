@@ -18,6 +18,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -42,7 +46,7 @@ requirements:
     - r-nlme
     - r-sf
     - r-spdata >=2.3.1
-    - r-spdep >=1.3_1
+    - r-spdep >=1.4_1
     - libblas
     - liblapack
   run:
@@ -56,9 +60,7 @@ requirements:
     - r-nlme
     - r-sf
     - r-spdata >=2.3.1
-    - r-spdep >=1.3_1
-    - libblas
-    - liblapack
+    - r-spdep >=1.4_1
 
 test:
   commands:
