@@ -3,7 +3,7 @@
 
 package:
   name: r-spatialreg
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -13,8 +13,6 @@ source:
 
 build:
   number: 0
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,29 +36,31 @@ requirements:
   host:
     - r-base
     - r-learnbayes
-    - r-mass
     - r-matrix
     - r-boot
     - r-coda
+    - r-marginaleffects
     - r-multcomp
+    - r-mvtnorm
     - r-nlme
     - r-sf
     - r-spdata >=2.3.1
-    - r-spdep >=1.4_1
+    - r-spdep >=1.4.1
     - libblas
     - liblapack
   run:
     - r-base
     - r-learnbayes
-    - r-mass
     - r-matrix
     - r-boot
     - r-coda
+    - r-marginaleffects
     - r-multcomp
+    - r-mvtnorm
     - r-nlme
     - r-sf
     - r-spdata >=2.3.1
-    - r-spdep >=1.4_1
+    - r-spdep >=1.4.1
 
 test:
   commands:
